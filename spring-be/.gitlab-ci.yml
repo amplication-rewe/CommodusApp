@@ -1,0 +1,17 @@
+include:
+  - project: developer-platform/platform-scaffolding/gitlab-ci-templates
+    ref: v4.3.21
+    file:
+      - type/java/pipeline-maven.yaml
+
+variables:
+  ORGANISATION: riag
+  PROD_CLUSTER: retail
+  PRODUCT: team-ca
+  APPLICATION: commodus-app
+  CONTAINER: spring-be
+  SCAN_IMAGE: "riag.jfrog.io/docker-local/orca-cli:1.74.1-5e40dc30@sha256:f8b962cc0274b5c4e61e81b9cceb8112a679d809cf07288569c0813e6900871b"
+
+
+
+
