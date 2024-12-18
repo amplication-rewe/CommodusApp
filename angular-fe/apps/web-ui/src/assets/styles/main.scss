@@ -1,0 +1,26 @@
+/* UNIFY | Core (1) */
+@use "@rewe/unify-ng"; /* needed if no Angular Material theme is used */
+@use "@rewe/unify-ng/reset"; /* needed if no reset/normalize styles are used */
+@use "@rewe/unify-ng/helper"; /* OPTIONAL: helper classes with page spacings */
+
+/* UNIFY | Foundations (2) */
+@use "@rewe/unify-ng/font"; /* adds Roboto 300, 500 & 700 and Material Icon fonts */
+@use "@rewe/unify-ng/typography";
+
+/* UNIFY | Core Components & Utils (3) */
+@use "@rewe/unify-ng/ripple";
+@use "@rewe/unify-ng/scrollbar";
+
+/* UNIFY | External Dependencies (4) */
+@use "@rewe/unify-ng/external/tippy";
+
+/* UNIFY | Components (5) */
+@use "@rewe/unify-ng/badge";
+@use "@rewe/unify-ng/icon";
+@use "@rewe/unify-ng/keyboard-shortcut";
+@use "@rewe/unify-ng/left-panel";
+@use "@rewe/unify-ng/menu";
+@use "@rewe/unify-ng/tooltip";
+
+/* Project Styles (6) */
+@use "layout/base";

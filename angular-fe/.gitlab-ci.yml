@@ -1,0 +1,42 @@
+include:
+  - project: developer-platform/platform-scaffolding/gitlab-ci-templates
+    ref: v.4.3.13
+    file:
+      - type/node/pipeline-pnpm.yaml
+      - type/features/node-20.yaml
+
+variables:
+  ORGANISATION: riag
+  PROD_CLUSTER: tech
+  PRODUCT: team-ca
+  APPLICATION: commodus-app
+  CONTAINER: angular-fe
+  DEFAULT_BRANCH: master
+  NODE_IMAGE_20: "riag.jfrog.io/docker-local/riag-node-20:20.17.0-bookworm-slim-ff628295"
+
+# ----------------------------------- Tests ---------------------------------- #
+test:unit:
+  extends: .test:unit
+  script:
+    - echo "<<< unit tests >>>"
+    - pnpm test:unit:coverage
+
+test:ui:
+  extends: .test:cypress
+  artifacts:
+    when: on_failure
+    paths:
+      - "dist/cypress/apps/web-ui-test/screenshots/*"
+      - "dist/cypress/apps/web-ui-test/videos/*"
+    expire_in: 30 mins
+  script:
+    - echo "<<< ui tests >>>"
+    - pnpm test:ui
+
+# ---------------------------------- Analyse --------------------------------- #
+sonar:
+  allow_failure: true
+
+# ---------------------------------- Package --------------------------------- #
+package-branch:
+  allow_failure: true

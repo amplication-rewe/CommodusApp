@@ -1,0 +1,5 @@
+{
+  "*.ts": "eslint",
+  "*.scss": "stylelint",
+  "*.{ts,scss,html}": "prettier"
+}
