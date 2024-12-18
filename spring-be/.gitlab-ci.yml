@@ -6,7 +6,7 @@ include:
 
 variables:
   ORGANISATION: riag
-  PROD_CLUSTER: retail
+  PROD_CLUSTER: tech
   PRODUCT: team-ca
   APPLICATION: commodus-app
   CONTAINER: spring-be

@@ -1,4 +1,4 @@
-# riag/retail/team-ca/commodus-app/spring-be
+# riag/tech/team-ca/commodus-app/spring-be
 
 ## Application Architecture Blueprint
 
@@ -25,9 +25,9 @@ Here are some useful links to resources we have already setup for you!
 
 **Service URLs**
 
-- [Development](https://platform.development.cloud.riag.digital/riag/retail/team-ca/commodus-app/spring-be/) \*
-- [Staging](https://platform.staging.cloud.riag.digital/riag/retail/team-ca/commodus-app/spring-be/) +
-- [Production](https://platform.production.cloud.riag.digital/riag/retail/team-ca/commodus-app/spring-be/) +
+- [Development](https://platform.development.cloud.riag.digital/riag/tech/team-ca/commodus-app/spring-be/) \*
+- [Staging](https://platform.staging.cloud.riag.digital/riag/tech/team-ca/commodus-app/spring-be/) +
+- [Production](https://platform.production.cloud.riag.digital/riag/tech/team-ca/commodus-app/spring-be/) +
 
 \* _After the first CI/CD pipeline runs through (couple minutes after repo creation)._  
 \+ _Run your products create_container [workflow](https://stackstorm.common.cloud.riag.digital/#/actions/riag_tech_ap_team.create_container) with the respective stage and start the manual (promote, deploy) CI/CD jobs afterwards._
