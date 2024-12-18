@@ -36,7 +36,7 @@ app:
 server:
   port: 8080
   servlet:
-    context-path: /riag/retail/team-ca/commodus-app/spring-be
+    context-path: /riag/tech/team-ca/commodus-app/spring-be
 
 #keycloak:
 #  enabled: true
