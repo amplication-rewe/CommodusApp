@@ -12,6 +12,7 @@ variables:
   APPLICATION: commodus-app
   CONTAINER: angular-fe
   DEFAULT_BRANCH: master
+  NEW_VAR: hello
   NODE_IMAGE_20: "riag.jfrog.io/docker-local/riag-node-20:20.17.0-bookworm-slim-ff628295"
 
 # ----------------------------------- Tests ---------------------------------- #
