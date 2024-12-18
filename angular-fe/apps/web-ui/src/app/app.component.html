@@ -1,0 +1,40 @@
+<header>
+  <unify-global-header
+    [(leftPanelOpen)]="leftPanel.opened"
+    appTitle="Application Title"
+    leftPanelToggle
+    menuToggleLabel="Toggle Left Panel"
+  />
+</header>
+
+<mat-sidenav-container unify-left-panel>
+  <mat-sidenav #leftPanel opened="true">
+    <unify-left-panel-nav *transloco="let t">
+      <unify-left-panel-profile name="John Appleseed" />
+
+      <unify-left-panel-primary-item [label]="t('PRIMARY.TITLE')" icon="dashboard" route="." />
+
+      <unify-left-panel-separator />
+
+      <unify-left-panel-section-heading headline="Section Heading" />
+
+      <unify-left-panel-submenu icon="landscape" label="Submenu">
+        <unify-left-panel-secondary-item [label]="t('SECONDARY.TITLE')" route="secondary" />
+      </unify-left-panel-submenu>
+
+      <ng-template #customAreaContent>
+        <unify-left-panel-language-switcher [activeLang]="activeLanguage" [config]="languageSwitcherConfig" />
+      </ng-template>
+    </unify-left-panel-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main unify-scrollbar class="app-main unify-left-panel__content" #main>
+      <div class="app-main-container">
+        <router-outlet></router-outlet>
+      </div>
+
+      <unify-footer (scrollTopClick)="scrollToTop(main)" [appVersion]="version" [scrollTop]="true" />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

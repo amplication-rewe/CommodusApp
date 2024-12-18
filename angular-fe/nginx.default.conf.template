@@ -1,0 +1,23 @@
+server {
+    listen       8080;
+    # https://github.com/nginxinc/docker-nginx-unprivileged/blob/2462760c14bdbf1595d58b9417c8c4c4a5e4aabf/entrypoint/10-listen-on-ipv6-by-default.sh#L57
+    listen  [::]:8080;
+    server_name  localhost;
+    add_header Content-Security-Policy "default-src 'self';
+                                        script-src 'self';
+                                        img-src 'self';
+                                        connect-src 'self' https://keycloak.staging.cloud.riag.digital;
+                                        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
+                                        font-src https://fonts.gstatic.com;";
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}

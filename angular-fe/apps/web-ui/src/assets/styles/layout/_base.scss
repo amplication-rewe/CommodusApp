@@ -1,0 +1,15 @@
+// GENERAL
+@use "@rewe/unify-ng/tokens" as unify; /* OPTIONAL: access the UNIFY tokens */
+
+body {
+  font: unify.$unify-global-body-md-regular;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+
+  &-container {
+    flex: 1;
+  }
+}

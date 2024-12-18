@@ -1,0 +1,28 @@
+{
+  "endOfLine": "lf",
+  "printWidth": 130,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.{scss,yml}",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-css-order", "prettier-plugin-organize-attributes"],
+  "attributeGroups": [
+    "^(id|name)$",
+    "^mat-",
+    "^unify-",
+    "^class$",
+    "$DEFAULT",
+    "^aria-",
+    "^#",
+    "$ANGULAR_OUTPUT",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_STRUCTURAL_DIRECTIVE"
+  ],
+  "attributeSort": "ASC"
+}
